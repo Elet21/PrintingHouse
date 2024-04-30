@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1078d812-a386-4a27-8981-9e72352ae3a1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PrintingHouse.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/Kuaranti/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/static/image/001.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/static/image/logo_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/static/image/telegram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/static/image/whatsapp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/templates/category_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PrintingHouse/templates/main_page.html" afterDir="false" />
+    <list default="true" id="1078d812-a386-4a27-8981-9e72352ae3a1" name="Changes" comment="Initial">
+      <change afterPath="$PROJECT_DIR$/PrintingHouse/templates/category_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/Kuaranti/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/Kuaranti/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/Kuaranti/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/Kuaranti/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/Kuaranti/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/Kuaranti/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/Kuaranti/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/Kuaranti/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/Kuaranti/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/PrintingHouse/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/PrintingHouse/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/PrintingHouse/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/PrintingHouse/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/static/image/001.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/templates/category_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/templates/category_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PrintingHouse/templates/main_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/templates/main_page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,10 +47,15 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "Python.models.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/danil/PycharmProjects/PrintingHouse/PrintingHouse/static/image"
+    "last_opened_file_path": "/home/danil/PycharmProjects/PrintingHouse/PrintingHouse/manage.py"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -61,11 +64,36 @@
       <recent name="$PROJECT_DIR$/PrintingHouse/templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/PrintingHouse/media" />
       <recent name="$PROJECT_DIR$/PrintingHouse/static/image" />
       <recent name="$PROJECT_DIR$/PrintingHouse/templates" />
       <recent name="$PROJECT_DIR$/PrintingHouse/Kuaranti" />
       <recent name="$PROJECT_DIR$/PrintingHouse" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="PrintingHouse" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PrintingHouse/Kuaranti" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PrintingHouse/manage.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -83,6 +111,65 @@
       <option name="presentableId" value="Default" />
       <updated>1712145618310</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial">
+      <option name="closed" value="true" />
+      <created>1712498826982</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712498826983</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial">
+      <option name="closed" value="true" />
+      <created>1712498855022</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712498855022</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
   </component>
 </project>

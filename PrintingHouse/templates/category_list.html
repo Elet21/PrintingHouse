@@ -4,17 +4,26 @@
     Hello Niga
 {% endblock %}
 
+
 {% block content %}
-{% for cat in business_card %}
-    <div class="card" style="width: 18rem;">
-        <img src="" class="card-img-top" alt="...">
+
+{% for cat in subcategory %}
+<div class="col p-1">
+    <div class="card" style="width: 10rem;">
+        <a href="{% url 'subcategory_detail' cat.id %}">
+            <img src="{{ cat.img.url }}" class=" card-img-bottom w-30" alt="...">
+        </a>
+<!--        <img src="{{ cat.img.url }}" class=" card-img-bottom w-30" alt="..." >-->
         <div class="card-body">
 <!--            <h5 class="card-title">Card title</h5>-->
 <!--            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's-->
 <!--                content.</p>-->
-            <a href="#" class="btn btn-primary">{{ cat.name }}</a>
+            <a href="#" class="btn btn-outline-success m-3" >{{ cat.name }}</a>
         </div>
     </div>
+</div>
 {% endfor %}
+
+
 
 {% endblock %}
