@@ -78,7 +78,8 @@
                     </a>
                 </div>
             </div>
-            <button type="button" class="btn btn-success mx-5 ">Корзина</button>
+            <button type="button" class="btn btn-success mx-5 ">
+                <a href="{% url "cart" %}">Корзина</a></button>
             <form class="d-flex" role="search" action='{% url "all_list" %}'>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='search'>
                 <button class="btn btn-outline-success" type="submit">Search</button>

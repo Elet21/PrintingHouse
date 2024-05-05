@@ -16,31 +16,6 @@ def my_logout(reuqests):
 class CustomLoginView(LoginView):
     authentication_form = LoginForm
     template_name = 'registration/login.html'
-# class Login(View):
-#     template_name = 'user/login.html'
-
-#     def get(self, request):
-#         context = {
-#             'form': LoginForm()
-#         }
-#         return render(request, 'user/login.html', context)
-
-#     def post(self, request):
-#         form = LoginForm(request.POST)
-
-#         if form.is_valid():
-#             username = request.POST['username']
-#             password = request.POST['password']
-#             user = auth.authenticate(username=username, password=password)
-#             auth.login(request, user)
-#             # session_key = request.session.session_key
-
-
-#         else:
-#             context = {
-#                 'form': form
-#             }
-#         return render(request, 'user/login.html', context)
 
 
 class Register(View):
@@ -65,3 +40,6 @@ class Register(View):
             }
         return render(request, 'registration/register.html', context)
 
+
+def cart(requests):
+    return render(requests, 'user_cart.html')
