@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 {% load static %}
+{% load cart_tag %}
+
+{% user_cart request as carts %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -78,8 +81,8 @@
                     </a>
                 </div>
             </div>
-            <button type="button" class="btn btn-success mx-5 ">
-                <a href="{% url "cart" %}">Корзина</a></button>
+            {% comment %} <button type="button" class="btn btn-success mx-5 ">Корзина</button> {% endcomment %}
+            <a href="{% url "cart" %}" class="btn btn-success mx-5">Корзина - {{ carts.total_price }}р</a>
             <form class="d-flex" role="search" action='{% url "all_list" %}'>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='search'>
                 <button class="btn btn-outline-success" type="submit">Search</button>

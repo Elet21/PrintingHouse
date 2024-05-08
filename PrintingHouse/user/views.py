@@ -5,6 +5,7 @@ from django.contrib import auth
 from django.contrib.auth.views import LoginView
 
 from .forms import RegistrationForm, LoginForm
+from cart.models import Cart
 
 
 def my_logout(reuqests):
