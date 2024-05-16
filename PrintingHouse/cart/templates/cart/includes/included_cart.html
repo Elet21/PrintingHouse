@@ -1,32 +1,28 @@
 {% load static %}
+{% load cart_tag %}
 
+{% user_cart request as carts %}
 
 
 <div class="card mb-3 text-bg-light shadow-lg">
     {% for cart in carts %}
         <div class="card-header">
             <h5 class="card-title">{{ cart.product.name }}</h5>
-        </div>
+        </div
         <ul class="list-group list-group-flush">
             <li class="list-group-item">
                 <div class="row text-center">
                     <div class="col p-0">
                         <div class="input-group">
                             <span class="input-group-btn">
-                                <button type="button" class="btn btn-dark btn-sm decrement"
-                                    data-cart-id="{{ cart.id }}"
-                                    data-cart-change-url="">
+                                <a id='decrement' href="{% url "cart_decrement" cart.product.id %}" class='btn btn-dark'>-</a>
                                     {% csrf_token %}
-                                    -</button>
                             </span>
-                            <input type="text" class="form-control number" value="{{ cart.quantity }}"
+                            <input id='quantity' type="text" class="form-control number" value="{{ cart.quantity }}"
                                 readonly>
-                            <span class="input-group-btn" href=''>
-                                <button type="button" class="btn btn-dark btn-sm increment"
-                                    data-cart-id="{{ cart.id }}"
-                                    data-cart-change-url="">
+                            <span class="input-group-btn">
+                                <a href="{% url "cart_add" cart.product.id %}" class='btn btn-dark'>+</a>
                                     {% csrf_token %}
-                                    +</button>
                             </span>
                         </div>
                     </div>
@@ -47,14 +43,9 @@
         </ul>
     {% endfor %}
 </div>
-<div class="card mb-3 shadow-lg">
+<div class="card mb-3 shadow-lg" id='cart-item-container'>
     <div class="card-footer">
         <p class="float-left">Итого <strong>{{ carts.total_quantity }}</strong> товар(а) на сумму</p>
         <h4 class="float-left"><strong>{{ carts.total_price }} Руб</strong></h4>
     </div>
 </div>
-{% if carts and not orders%}
-<a class="btn btn-dark" href="">
-    Оформить заказ
-</a>
-{% endif %}

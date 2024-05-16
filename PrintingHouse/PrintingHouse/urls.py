@@ -24,6 +24,7 @@ urlpatterns = [
     path('', include('Kuaranti.urls')),
     path('', include('user.urls')),
     path('', include('cart.urls')),
+    path("", include('order.urls')),
     path('', include('django.contrib.auth.urls')),
 ]
 

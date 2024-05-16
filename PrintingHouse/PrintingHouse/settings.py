@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'Kuaranti',
     'user',
     'cart',
+    'order',
 ]
 
 MIDDLEWARE = [

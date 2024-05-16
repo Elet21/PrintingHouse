@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1078d812-a386-4a27-8981-9e72352ae3a1" name="Changes" comment="add Category">
-      <change beforePath="$PROJECT_DIR$/.idea/PrintingHouse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PrintingHouse.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PrintingHouse/Kuaranti/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintingHouse/Kuaranti/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "dev",
-    "last_opened_file_path": "/home/danil/PycharmProjects/PrintingHouse",
+    "last_opened_file_path": "/home/danil/PycharmProjects/PH/PrintingHouse/PrintingHouse",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
   "keyToStringList": {
