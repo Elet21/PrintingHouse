@@ -1,0 +1,27 @@
+{% extends "main_page.html" %}
+{% load static %}
+
+{% block adress %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Контакты</h2>
+            <h5>Телефон:</h5>
+            <p>8 (917) 225-02-51</p>
+            <p>8 (843) 500-58-63</p>
+            <h5>Email: </h5>
+            <p>sales@kurantyprint.ru</p>
+            <p>Адрес: Татарстан, Казань, Спартаковская, 23, 4 этаж оф 412</p>
+            <h5>Режим работы:</h5>
+            <p>с 9:00 до 18:00, без обеда</p>
+        </div>
+        <div class="col-md-6">
+            <h2>Казань</h2>
+            <div class="map-container">
+                <img src="{% static "image/s1.webp" %}" alt="" height='250' widt='100'>
+                <img src="{% static "image/s2.webp" %}" alt="" height='250' widt='100'>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
