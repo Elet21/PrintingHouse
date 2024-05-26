@@ -30,14 +30,6 @@ class CustomLoginView(LoginView):
         # Logic to transfer cart items from session to user
         if session_key:
             Cart.objects.filter(session_key=session_key).update(user=user)
-            # print(session_cart_items)
-            # # Transfer session cart items to user cart
-            # for item in session_cart_items:
-            #     item.user = user
-            #     item.session_key = None
-            #     item.save()
-                
-
         return redirect(self.get_success_url())
 
 

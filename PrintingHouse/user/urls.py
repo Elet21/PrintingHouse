@@ -5,6 +5,6 @@ from .views import Register, my_logout, CustomLoginView, cart
 urlpatterns = [
     path('register/', Register.as_view(), name='register'),
     path('logout/', my_logout, name='logout_url'),
-    path('login/', CustomLoginView.as_view(), name='login'),
+    path('accounts/login/', CustomLoginView.as_view(), name='login'),
     path('cart/', cart, name='cart'),
 ]
