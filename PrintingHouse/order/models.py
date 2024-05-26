@@ -17,7 +17,6 @@ class Order(models.Model):
     user = models.ForeignKey(
         to=User, on_delete=models.SET_DEFAULT, blank=True, null=True, verbose_name="Пользователь", default=None)
     phone_number = models.CharField(max_length=20, verbose_name="Номер телефона")
-    created_timestamp = models.DateTimeField(auto_now_add=True, verbose_name="Дата создания заказа")
 
     class Meta:
         verbose_name = "Заказ"

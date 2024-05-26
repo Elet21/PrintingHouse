@@ -71,7 +71,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="heading{{ order.id }}">
                                     <button class="accordion-button {% if order != orders.0 %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ order.id }}" aria-expanded="false" aria-controls="collapse{{ order.id }}">
-                                        Заказ № {{ order.id }} - {{ order.created_timestamp }} 
+                                        Заказ № {{ order.id }} - 
                                     </button>
                                 </h2>
                                 <div id="collapse{{ order.id }}" class="accordion-collapse collapse {% if order == orders.0 %}show{% endif %}" aria-labelledby="heading{{ order.id }}" data-bs-parent="#accordionExample">
@@ -92,12 +92,20 @@
                                                         <td>{{ item.quantity }}</td>
                                                         <td>{{ item.price }}</td>
                                                         <td>{{ item.products_price }}</td>
-                                                        
                                                     </tr>
                                                 {% endfor %}
+                                                    <tr>
+                                                        <td>Итого: </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                        <td>{{ order.orderitem_set.all.total_price}} руб</td>
+                                                    </tr>
                                             </tbody>
                                         </table>
+                                        <a class="btn btn-dark mt-1" href="{% url "download_pdf" order.id %}">Скачать PDF</a>
+
                                     </div>
+
                                 </div>
                             </div>
                             {% endfor %}
