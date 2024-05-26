@@ -1,6 +1,5 @@
 from ast import Delete
 from django.shortcuts import redirect, render
-from django.http import JsonResponse
 
 from Kuaranti.models import Product
 from .models import Cart
@@ -15,11 +14,25 @@ def cart_add(requests, product_id):
 
         if carts.exists():
             cart = carts.first()
-            if cart:
+            if cart:    
                 cart.quantity += 1
                 cart.save()
         else:
             Cart.objects.create(user=requests.user, product=product, quantity=1)
+    else:
+        carts = Cart.objects.filter(
+            session_key=requests.session.session_key, product=product)
+
+        if carts.exists():
+            cart = carts.first()
+            if cart:
+                cart.quantity += 1
+                cart.save()
+        else:
+            Cart.objects.create(
+                session_key=requests.session.session_key, product=product, quantity=1)
+    
+
 
     return redirect(requests.META['HTTP_REFERER'])
 

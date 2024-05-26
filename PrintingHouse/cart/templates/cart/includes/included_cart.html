@@ -1,8 +1,7 @@
 {% load static %}
-{% load cart_tag %}
 
-{% user_cart request as carts %}
-
+{% comment %} {% load cart_tag %}
+{% user_cart request as carts %}  {% endcomment %}
 
 <div class="card mb-3 text-bg-light shadow-lg">
     {% for cart in carts %}

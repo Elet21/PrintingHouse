@@ -1,5 +1,5 @@
 from django import template
-from cart.models import Cart
+from cart.utils import get_user_carts
 
 
 
@@ -8,4 +8,4 @@ register = template.Library()
 
 @register.simple_tag()
 def user_cart(requests):
-    return Cart.objects.filter(user=requests.user)
+    return get_user_carts(requests)

@@ -18,6 +18,31 @@ class CustomLoginView(LoginView):
     authentication_form = LoginForm
     template_name = 'registration/login.html'
 
+    def form_valid(self, form):
+    # Get the user from the form
+        user = form.get_user()
+
+        session_key = self.request.session.session_key
+
+        # Perform the default login
+        login(self.request, user)
+
+        # Logic to transfer cart items from session to user
+        if session_key:
+            Cart.objects.filter(session_key=session_key).update(user=user)
+            # print(session_cart_items)
+            # # Transfer session cart items to user cart
+            # for item in session_cart_items:
+            #     item.user = user
+            #     item.session_key = None
+            #     item.save()
+                
+
+        return redirect(self.get_success_url())
+
+
+
+
 
 class Register(View):
     template_name = 'registration/register.html'
