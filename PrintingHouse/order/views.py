@@ -50,7 +50,13 @@ class CreatOrder(View):
                     price=price,
                     quantity=quantity,
                 )
-            return redirect('main_page')
+
+                product.quantity -= quantity
+                product.save()
+
+                # Очистить корзину пользователя после создания заказа
+                cart_items.delete()
+            return redirect('order_list')
         else:
             context = {
                 'forms': form
@@ -98,7 +104,7 @@ def download_pdf(request, order_id):
     
     p.drawString(30, height - 80, f"Номер заказа: {order.id}")
     p.drawString(30, height - 100, f"Имя: {order.user.username}")
-    p.drawString(30, height - 120, f"Номер телефона: {order.phone_number}")
+    p.drawString(30, height - 120, f"Номер телефона: +{order.phone_number}")
     
     # Пример добавления линии разделения
     p.line(30, height - 150, 580, height - 150)
