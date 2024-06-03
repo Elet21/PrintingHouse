@@ -1,0 +1,31 @@
+{% extends "main_page.html" %}
+{% load static %}
+
+
+{% block title %}
+    Набережные Челны
+{% endblock title %}
+
+{% block address %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Контакты</h2>
+            <h5>Телефон:</h5>
+            <p>8 (917) 225-02-51</p>
+            <h5>Email: </h5>
+            <p>sales@kurantyprint.ru</p>
+            <p>Адрес: Набережные Челны, проспект Хасана Туфана, 12</p>
+            <h5>Режим работы:</h5>
+            <p>с 9:00 до 18:00, без обеда</p>
+        </div>
+        <div class="col-md-6">
+            <h2>Набережные Челны</h2>
+            <div class="map-container mt-3">
+                <img src="{% static "image/n1.webp" %}" alt="" height='200' widt='75'>
+                <img src="{% static "image/n2.webp" %}" alt="" height='200' widt='75'>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
