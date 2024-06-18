@@ -1,6 +1,9 @@
 {% extends "main_page.html" %}
 {% load static %}
 
+{% block title %}
+    Корзина
+{% endblock title %}
 
  
 {% block content %}
@@ -16,9 +19,12 @@
                     {% include "cart/includes/included_cart.html" %}
                     
                     <!-- Закончилась разметка корзины -->
+                     {% if carts %}
                         <a class="btn btn-dark" href="{% url "create_order" %}">
                             Оформить заказ
                         </a>
+                     {% endif %}
+                        
                 </div>
             </div>
         </div>
